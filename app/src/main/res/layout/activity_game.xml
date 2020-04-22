@@ -2,45 +2,49 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/button_add_category"
+    tools:context=".GameActivity">
+    
+    <TextView
+        android:id="@+id/text_view_username"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/add_new_category" />
+        android:layout_height="wrap_content" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="40dp" />
+
+    <Spinner
+        android:id="@+id/spinner_choose_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Space
         android:layout_width="wrap_content"
         android:layout_height="40dp" />
 
     <Button
-        android:id="@+id/button_add_question"
+        android:id="@+id/button_start_questions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/add_new_question" />
+        android:text="@string/start_questions" />
 
     <Space
         android:layout_width="wrap_content"
         android:layout_height="40dp" />
 
-    <EditText
-        android:id="@+id/edit_text_username"
+    <TextView
+        android:id="@+id/text_view_curr_question"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_username" />
+        android:layout_height="wrap_content"/>
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="40dp" />
-
-    <Button
-        android:id="@+id/button_play_game"
+    <ListView
+        android:id="@+id/list_view_curr_answers"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/play_game" />
+        android:layout_height="wrap_content"/>
+
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>
