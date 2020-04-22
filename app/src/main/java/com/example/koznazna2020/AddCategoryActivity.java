@@ -11,4 +11,11 @@ public class AddCategoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_category);
     }
+
+    private void addCategoryToDatabase() {
+
+        QuestionCategory questionCategory = new QuestionCategory("matematika");
+        AppDatabase.getInstance(this).questionCategoryDao().insertQuestionCategory(questionCategory);
+
+    }
 }
