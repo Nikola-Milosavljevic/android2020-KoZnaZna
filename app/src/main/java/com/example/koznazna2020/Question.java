@@ -5,6 +5,8 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
+import java.util.ArrayList;
+
 @Entity(tableName = "questions", foreignKeys = @ForeignKey(entity = QuestionCategory.class,
                                                             parentColumns = "id",
                                                             childColumns = "category_id"))
@@ -19,12 +21,12 @@ public class Question {
 
     public String question;
 
-    public String[] answers = new String[4];
+    public ArrayList<String> answers;
 
     @ColumnInfo(name = "correct_ans_id")
     public Integer correctAnsId;
 
-    public Question(Integer categoryId, String question, String[] answers, Integer correctAnsId) {
+    public Question(Integer categoryId, String question, ArrayList<String> answers, Integer correctAnsId) {
         this.categoryId = categoryId;
         this.question = question;
         this.answers = answers;

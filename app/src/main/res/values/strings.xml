@@ -5,4 +5,8 @@
     <string name="hint_username">Enter username</string>
     <string name="play_game">Play game</string>
     <string name="start_questions">Start questions!</string>
+    <string name="hint_new_category">Enter category name</string>
+    <string name="hint_new_question">Enter question</string>
+    <string name="hint_add_answer">Enter answer</string>
+    <string name="hint_add_corr_ans_id">Enter id of correct answer (0–3)</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.koznazna2020;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -58,5 +59,10 @@ public class MainActivity extends AppCompatActivity {
     private void addCategory() {
         Intent intent = new Intent(this, AddCategoryActivity.class);
         startActivityForResult(intent, REQUEST_CODE_CATEGORY);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

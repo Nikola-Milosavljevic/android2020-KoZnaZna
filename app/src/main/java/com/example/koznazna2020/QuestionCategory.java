@@ -1,5 +1,6 @@
 package com.example.koznazna2020;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Index;
@@ -18,4 +19,9 @@ public class QuestionCategory {
     @ColumnInfo(name = "category_name")
     public String categoryName;
 
+    @NonNull
+    @Override
+    public String toString() {
+        return categoryName;
+    }
 }
